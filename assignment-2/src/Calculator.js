@@ -19,6 +19,10 @@ function KeyPadComponent(props) {
             setText(text1 + e.target.value)
     };
 
+    const square = () => {
+        setText(text1 * text1)
+    }
+
 
     return (
         <div className="Calculator">
@@ -58,6 +62,8 @@ function KeyPadComponent(props) {
                 <Button label="=" ClickHandle={ClickHandle} />
                 <Button label="/" ClickHandle={ClickHandle} />
             </div>
+
+            <Button ClickHandle={square} label="Square" />
 
 
         </div>
